@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+
+</nav>
+
+
+<!-- Student form -->
+<form [formGroup]="userForm" (ngSubmit)="submitUserData()" align="center" style="margin-left: 37%;margin-top:2% ">
+  <div class="row">
+    <div class="col-lg-5 col-md-8 col-sm-8">
+      <div class="row">
+        <div class="col-md-8 mb-3">
+          <label>Code</label>
+          <input type="text" formControlName="code" disabled class="form-control"  required>
+          <!-- Showing errors using getter method -->
+        </div>
+        <div class="col-md-8 mb-3">
+          <label>Heure de sortie </label>
+          <input type="number" formControlName="expiration" class="form-control" min="1" max="24" placeholder="Exemple 21h de nuit" required>
+          <!-- Showing errors using getter method -->
+          <h4 style="color: rgb(255, 55, 55)">Attention :Vous devez enregistrer ou écrire le code quelque part pour éviter de l'oublier</h4>
+        </div>
+        <div class="col-md-8 mb-3">
+          <button type="submit" class="btn btn-success" [disabled]="!userForm.valid">Connexion</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</form>

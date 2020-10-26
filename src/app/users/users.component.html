@@ -1,0 +1,34 @@
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+</nav>
+<div >
+<h4 class="header" align="center" style="color: rgb(167, 187, 201) ;" >Ouvrir </h4>
+<p class="text-center"></p>
+  <h6 align="center" style="color:#DC143C">Cette page sera  automatiquement fermée dans : {{timer}} secondes</h6>
+<iframe class="row" style="margin-left: 25%" width="50%" height="280px" frameborder="0" src="https://app.ubidots.com/ubi/public/getdashboard/dPICMzH5XYBFrh1415RhSVVRfgc"></iframe><br>
+<div align="center" class="container">
+  <!--<a (click)="logout()" class="navbar-text navbar-right navbar-link">Déconnecter</a>-->
+  <button  type="button" class="btn btn-primary gap-right" (click)="logout()">Déconnecter</button>
+</div>
+</div>
+<!--
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="card" style="width: 20rem;">
+      <img class="card-img-top image" [src]="user.image" *ngIf="user.image" alt="User image">
+      <img class="card-img-top image" src="https://via.placeholder.com/400x300" *ngIf="!user.image" alt="User image">
+      <div *ngIf='user.provider != "password"'class="card-body">
+        <h4 class="card-title">{{user.name}}</h4>
+        <p class="card-text">This is an example of Social Authentication using Firebase in an Angular 7 web app. </p>
+      </div>
+      <div *ngIf='user.provider == "password"'class="card-body">
+        <form [formGroup]="profileForm">
+          <div class="form-group">
+            <label>Your name</label>
+            <input type="text" formControlName="name" class="form-control" required>
+          </div>
+        </form>
+        <a (click)="save(profileForm.value)" class="btn btn-primary">Save</a>
+      </div>
+    </div>
+  </div>
+</div>-->

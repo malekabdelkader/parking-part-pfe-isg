@@ -1,0 +1,38 @@
+
+<div class="container" style="align-content: center; margin-top: 5%">
+<!-- Student form -->
+<form [formGroup]="userForm" (ngSubmit)="Searchannonce()" novalidate>
+  <div style="align-content: center;"  >
+
+          <div  style="align-content: center;">
+
+          <h1 class="h2" style="color: rgb(167, 187, 201) ;margin-left: 38%" >Se connecter</h1><br><br>
+          </div>
+     
+
+   
+        <div style="align-content: center;">
+          
+          <input style="width:51%;margin-left: 32%" placeholder="Entrez votre code d'abonnement" type="password" maxlength="6" minlength="6" formControlName="code" class="form-control" required >
+          <!-- Showing errors using getter method -->
+        </div>
+        <div style="align-content:center">
+           <!-- <h6 style="color: red">NB: Le code contient 6 chiffres</h6>-->
+            <h6 style="color: red;margin-left: 38%">{{invalide}}</h6>
+          </div>
+
+
+      <div style="align-content: center;">
+       <!-- <button  type="button" class="btn btn-secondary gap-right" (click)="ResetForm()">Annuler</button>  -->
+        <button style="margin-left: 45%" type="submit" class="btn btn-success" [disabled]="!userForm.valid">Connexion</button><br>
+        
+      </div><br><br>
+<div style="margin-left: 10%" *ngIf="capacite!='8'" >
+  <h5 style="color: bisque" align="center">Reservation rapide:</h5>
+  <h6 style="color: bisque" align="center">   Maximum 24H</h6>
+
+  <button style="margin-left: 40%"  type="button" class="btn btn-success" (click)="login()">Cliquer Ici</button>
+  <!-- Showing errors using getter method -->
+</div>
+   
+  </div></form></div>
